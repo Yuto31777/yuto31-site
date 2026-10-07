@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>無料相談のご予約｜嶋田悠人</title>
+<meta name="description" content="お店専用サイトの無料相談（15分）のご予約ページです。日時を選んで送信するだけ。">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="wrap"><a class="logo" href="index.html">← 嶋田悠人｜店舗サイト制作</a></div></header>
+<main><section><div class="wrap" style="max-width:640px">
+  <p class="eyebrow">無料相談のご予約</p>
+  <h1>日時を選んで、送信するだけ。</h1>
+  <p>所要時間は約15分。お店のお悩みをお聞きし、必要なら専用の試作をご提案します。無理な営業はしません。</p>
+
+  <div id="done" role="status" aria-live="polite"></div>
+  <form id="f" class="form" novalidate>
+    <label>ご希望の日<span class="req">必須</span></label>
+    <div id="days" class="days" role="group" aria-label="日付"></div>
+    <label>ご希望の時間<span class="req">必須</span></label>
+    <div id="times" class="times" role="group" aria-label="時間"><span class="note">先に日付を選んでください</span></div>
+
+    <label for="mode">相談方法<span class="req">必須</span></label>
+    <select id="mode"><option>電話</option><option>オンライン（Zoom・Meet）</option><option>ご訪問（近隣のみ）</option></select>
+
+    <label for="store">お店・会社の名前<span class="req">必須</span></label>
+    <input id="store" autocomplete="organization" required>
+    <label for="name">お名前<span class="req">必須</span></label>
+    <input id="name" autocomplete="name" required>
+    <label for="contact">電話番号またはメールアドレス<span class="req">必須</span></label>
+    <input id="contact" autocomplete="tel" required>
+    <label for="kind">業種</label>
+    <select id="kind"><option>飲食店</option><option>美容室・サロン</option><option>中古車・自動車</option><option>不動産</option><option>その他の店舗</option><option>会社・事務所</option></select>
+    <label for="note">お困りごと・ご要望（任意）</label>
+    <textarea id="note" rows="4" placeholder="例：予約の電話が多くて困っている、ホームページがない など"></textarea>
+
+    <input id="hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+    <p class="note">お預かりした情報は、ご予約のご連絡と相談のためだけに使い、第三者に提供しません。</p>
+    <div id="msg" role="status" aria-live="polite"></div>
+    <button class="btn" id="submit" type="submit" style="width:100%;margin-top:8px">この内容で予約する</button>
+  </form>
+</div></section></main>
+<script src="config.js"></script>
+<script src="reserve.js"></script>
+</body>
+</html>
