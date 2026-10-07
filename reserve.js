@@ -98,6 +98,12 @@
       .then(function () { btn.disabled = false; btn.textContent = "この内容で予約する"; });
   });
 
+  // 名刺・提案書のQRは ?store=店名 付きで開く。店名を入力欄に入れておく
+  try {
+    var q = new URLSearchParams(location.search).get("store");
+    if (q) $("store").value = q.slice(0, 100);
+  } catch (e) { /* 古いブラウザでは何もしない */ }
+
   renderDays();
   loadTaken().then(function () { if (picked.date) renderTimes(); });
 })();
