@@ -5,7 +5,7 @@ window.SITE = {
   email: "yutoshimada0301@gmail.com",
   // 予約の送信先（Google Apps Script のウェブアプリURL）。空の間はメール送信画面に切り替わる。
   // 設定手順は README.md の「予約ページの有効化」を参照。
-  bookingEndpoint: "",
+  bookingEndpoint: "https://script.google.com/macros/s/AKfycbw3LQB5exZI2Nl5sLZdB8jyZewd4uTX2Fd18XzYSGshZ2GJkQrWV0WFZSHAkc7vNJhS/exec",
   lineUrl: "",
   // 試作例（公開済みのダミー店舗のデモのみ載せる。実在の店舗は許可なく載せない）
   demoUrl: "https://yuto31777.github.io/yuto31-demos/yohaku-coffee/",
